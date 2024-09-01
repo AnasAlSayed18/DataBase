@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="690.0" prefWidth="1074.0" styleClass="center-Vbox" stylesheets="@LoginStyle.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginController">
+   <children>
+      <VBox fx:id="loginVbox" alignment="CENTER" prefHeight="700.0" prefWidth="1200.0" spacing="20.0" stylesheets="@LoginStyle.css" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="350.0" fitWidth="345.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/Logo.PNG" />
+               </image>
+            </ImageView>
+            <TextField fx:id="userTf" maxHeight="40.0" maxWidth="272.0" minHeight="40.0" minWidth="250.0" prefHeight="40.0" prefWidth="250.0" promptText="User Name" styleClass="loginTf" stylesheets="@LoginStyle.css">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></TextField>
+            <StackPane maxHeight="41.0" maxWidth="937.0" minHeight="41.0" minWidth="250.0" prefHeight="41.0" prefWidth="937.0">
+               <children>
+                  <PasswordField fx:id="passTf" maxHeight="40.0" maxWidth="272.0" minHeight="40.0" minWidth="250.0" prefHeight="40.0" prefWidth="272.0" promptText="Passowrd" styleClass="loginTf" stylesheets="@LoginStyle.css">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font></PasswordField>
+                  <TextField fx:id="showTf" maxHeight="40.0" maxWidth="272.0" minHeight="40.0" minWidth="250.0" prefHeight="40.0" prefWidth="250.0" styleClass="loginTf" stylesheets="@LoginStyle.css" visible="false" />
+               </children>
+            </StackPane>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <CheckBox fx:id="checkBox" mnemonicParsing="false" onAction="#CheckAction" stylesheets="@LoginStyle.css" text="𝗦𝗛𝗢𝗪 𝗣𝗔𝗦𝗦𝗪𝗢𝗥𝗗" textFill="#fef8e0">
+                     <styleClass>
+                        <String fx:value="hover" />
+                        <String fx:value="forgetPassord" />
+                     </styleClass>
+                  </CheckBox>
+                  <Button fx:id="forgetBtn" mnemonicParsing="false" onAction="#forgetPassword" prefHeight="25.0" prefWidth="138.0" stylesheets="@LoginStyle.css" text="𝗙𝗢𝗥𝗚𝗘𝗧 𝗣𝗔𝗦𝗦𝗪𝗢𝗥𝗗?" textFill="#fef8e0">
+                     <styleClass>
+                        <String fx:value="forgetPassord" />
+                        <String fx:value="hover" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </HBox>
+            <Button fx:id="loginBtn" maxHeight="40.0" maxWidth="272.0" mnemonicParsing="false" onAction="#LoginAction" prefHeight="40.0" prefWidth="250.0" styleClass="loginBtn" stylesheets="@LoginStyle.css" text="𝐋𝐎𝐆 𝐈𝐍" textFill="#fef8e0">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Button>
+            <Button fx:id="signupBtn" maxHeight="40.0" maxWidth="272.0" mnemonicParsing="false" onAction="#signupAction" prefHeight="40.0" prefWidth="250.0" styleClass="signupBtn" stylesheets="@LoginStyle.css" text="𝐒𝐈𝐆𝐍 𝐔𝐏" textFill="#6f0000">
+               <font>
+                  <Font size="25.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="40.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="30.0" />
+         </padding>
+      </VBox>
+      <VBox fx:id="signupVbox" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="618.0" prefWidth="880.0" spacing="20.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TextField fx:id="signUserTf" maxHeight="40.0" maxWidth="250.0" prefHeight="40.0" prefWidth="250.0" promptText="User Name" styleClass="loginTf" stylesheets="@LoginStyle.css">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></TextField>
+            <TextField fx:id="signPhoneTf" maxHeight="40.0" maxWidth="250.0" prefHeight="40.0" prefWidth="250.0" promptText="Phone" styleClass="loginTf" stylesheets="@LoginStyle.css">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></TextField>
+            <TextField fx:id="signAdressTf" maxHeight="40.0" maxWidth="250.0" prefHeight="40.0" prefWidth="250.0" promptText="Address" styleClass="loginTf" stylesheets="@LoginStyle.css">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></TextField>
+            <TextField fx:id="signEmailTf" maxHeight="40.0" maxWidth="250.0" prefHeight="40.0" prefWidth="250.0" promptText="Email" styleClass="loginTf" stylesheets="@LoginStyle.css">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></TextField>
+            <TextField fx:id="signPassTf" maxHeight="40.0" maxWidth="250.0" prefHeight="40.0" prefWidth="250.0" promptText="Password" styleClass="loginTf" stylesheets="@LoginStyle.css">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></TextField>
+            <TextField fx:id="signCpassTf" maxHeight="40.0" maxWidth="250.0" prefHeight="40.0" prefWidth="250.0" promptText="Confirm Password" styleClass="loginTf" stylesheets="@LoginStyle.css">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></TextField>
+            <ComboBox fx:id="comboBox" maxHeight="40.0" maxWidth="250.0" prefHeight="40.0" prefWidth="250.0" promptText="𝗖𝗛𝗢𝗢𝗦𝗘 𝗬𝗢𝗨𝗥 𝗔𝗖𝗖𝗢𝗨𝗡𝗧 𝗧𝗬𝗣𝗘" stylesheets="@LoginStyle.css">
+               <styleClass>
+                  <String fx:value="loginTf" />
+                  <String fx:value="whiteBg" />
+               </styleClass></ComboBox>
+            <ComboBox fx:id="comboBox1" layoutX="325.0" layoutY="407.0" maxHeight="40.0" maxWidth="250.0" prefHeight="40.0" prefWidth="250.0" promptText="𝗪𝗛𝗔𝗧 𝗜𝗦 𝗬𝗢𝗨𝗥 𝗙𝗔𝗩𝗢𝗥𝗜𝗧𝗘 𝗖𝗢𝗟𝗢𝗥?" stylesheets="@LoginStyle.css">
+               <styleClass>
+                  <String fx:value="loginTf" />
+                  <String fx:value="whiteBg" />
+               </styleClass></ComboBox>
+            <Button fx:id="SignUp2" maxHeight="40.0" maxWidth="250.0" mnemonicParsing="false" onAction="#Signup2Action" prefHeight="40.0" prefWidth="250.0" styleClass="signupBtn" stylesheets="@LoginStyle.css" text="𝐒𝐈𝐆𝐍 𝐔𝐏" textFill="#fef8e0">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Button>
+            <Button fx:id="Login2" maxHeight="40.0" maxWidth="250.0" mnemonicParsing="false" onAction="#signup2loginAction" prefHeight="40.0" prefWidth="250.0" styleClass="loginBtn" stylesheets="@LoginStyle.css" text="𝐋𝐎𝐆 𝐈𝐍" textFill="#6f0000">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <VBox fx:id="forgetVbox" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="30.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="128.0" text="Lets verfiy :)" textAlignment="CENTER" textFill="#fef8e0">
+               <font>
+                  <Font name="System Bold Italic" size="19.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+               <children>
+                  <Label text="Enter Your User Name:" textFill="#fef8e0">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font></Label>
+                  <TextField fx:id="forgetTf" />
+               </children>
+            </HBox>
+            <ComboBox fx:id="forgetCombo" maxHeight="40.0" maxWidth="250.0" minHeight="40.0" minWidth="250.0" prefWidth="250.0" promptText="𝙒𝙝𝙖𝙩 𝙞𝙨 𝙮𝙤𝙪𝙧 𝙁𝙖𝙫𝙤𝙧𝙞𝙩𝙚 𝘾𝙤𝙡𝙤𝙧" stylesheets="@LoginStyle.css">
+               <styleClass>
+                  <String fx:value="loginTf" />
+                  <String fx:value="whiteBg" />
+               </styleClass></ComboBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+               <children>
+                  <Button fx:id="backBtn1" mnemonicParsing="false" onAction="#backBtnAction" prefHeight="20.0" prefWidth="48.0" styleClass="signupBtn" stylesheets="@LoginStyle.css">
+                     <graphic>
+                        <ImageView fx:id="back1" fitHeight="32.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/back.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="submit" mnemonicParsing="false" onAction="#CheckUserForget" prefHeight="41.0" prefWidth="53.0" styleClass="loginBtn" stylesheets="@LoginStyle.css">
+                     <graphic>
+                        <ImageView fitHeight="31.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/submit.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox fx:id="resetVbox" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="40.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TextField fx:id="resestTf" maxHeight="40.0" maxWidth="250.0" minHeight="40.0" minWidth="250.0" prefHeight="40.0" prefWidth="250.0" promptText="𝗡𝗲𝘄 𝗣𝗮𝘀𝘀𝘄𝗼𝗿𝗱" styleClass="loginTf" stylesheets="@LoginStyle.css">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></TextField>
+            <TextField fx:id="restCTf" maxHeight="40.0" maxWidth="250.0" minHeight="40.0" minWidth="250.0" prefHeight="40.0" prefWidth="250.0" promptText="𝗖𝗼𝗻𝗳𝗶𝗿𝗺 𝗣𝗮𝘀𝘀𝘄𝗼𝗿𝗱" styleClass="loginTf" stylesheets="@LoginStyle.css">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></TextField>
+            <HBox alignment="CENTER" prefHeight="79.0" prefWidth="900.0" spacing="30.0">
+               <children>
+                  <Button fx:id="backBtn" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#backBtnAction" prefHeight="36.0" prefWidth="48.0" styleClass="signupBtn" stylesheets="@LoginStyle.css">
+                     <graphic>
+                        <ImageView fx:id="back" fitHeight="32.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/back.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="resetBtn" mnemonicParsing="false" onAction="#RessetPassword" prefHeight="36.0" prefWidth="48.0" styleClass="loginBtn" stylesheets="@LoginStyle.css">
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/reset.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
