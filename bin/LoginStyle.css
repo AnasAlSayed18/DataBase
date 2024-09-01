@@ -1,0 +1,54 @@
+.loginBtn{
+    -fx-background-color:#6f0000;
+    -fx-background-radius:30;
+    -fx-text-fill: #fef8fe;
+}
+
+.loginBtn:hover{
+    -fx-background-color: #fef8fe;
+    -fx-text-fill: #000000;     
+    -fx-background-radius: 30px; 
+}
+
+.signupBtn{
+    -fx-background-color:#fef8e0;
+    -fx-background-radius:30;
+    -fx-text-fill: #6f0000;
+
+}
+
+.signupBtn:hover{
+    -fx-background-color: #fff;
+    -fx-text-fill: #000000;      
+    -fx-background-radius: 30px; 
+}
+
+.center-Vbox{
+     -fx-background-image: url("img/factory_blur.jpg"); 
+    -fx-background-position: left top, center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover, auto; 
+}
+
+
+.loginTf{
+    -fx-background-radius: 30;
+}
+
+.Btn{
+    -fx-background-radius: 30;
+    -fx-background-color: #6f0000;
+}
+
+.forgetPassord{
+    -fx-background-color: transparent;
+    -fx-text-fill: #fef8e0;
+}
+
+.hover:hover{
+    -fx-text-fill: #6f0000;
+}
+
+.whiteBg{
+    -fx-background-color: white;
+}
